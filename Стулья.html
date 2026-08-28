@@ -9,52 +9,7 @@
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <img src="images\logo.png" alt="Логотип">
-            <h1>Козий дом</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Акции %</a>
-                    <ul class="a">
-                    <li>
-                        <a href="#">На данный момент пока нет доступых акций</a>
-                    </li>
-                </ul>
-                </li>
-                <li><a href="#">Качество</a>
-                 <ul class="k">
-                    <li>
-                        <a href="#">За качество отвечаем!</a>
-                    </li>
-                </ul>
-            </li>
-                <li><a href="#">Гарантия</a>
-                 <ul class="g">
-                    <li>
-                        <a href="#">Гарантия длится 4 месяца</a>
-                    </li>
-                </ul></li>
-                <li><a href="#">Комфорт</a>
-                 <ul class="ko">
-                    <li>
-                        <a href="#">Наши товары обеспечат вам полный комфорт</a>
-                    </li>
-                </ul></li>
-            </ul>
-        </nav>
-        <div class="contacts">
-            <a href="info.html" class="re0">Информация</a>
-            <a href="info.html" class="re">О нас и почему мы. </a>
-            <a href="https://instagram.com/kozii_home" class="re1">@kozii_home</a>
-            <a href="#" class="re11">Инстаграмм. </a>
-            <a href="#" class="re2">📞 +996 502 024 068</a>
-            <a href="#" class="re22">Поддержка/консультация. </a>
-            <a href="#" class="re3">📞 +996 700 52 00 77</a>
-            <a href="#" class="re33">Поддержка/консультация. </a>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <section class="categories">
         <div class="category">
@@ -96,6 +51,14 @@
         <footer>
         <p>© 2025 Козий дом. Все права защищены.</p>
     </footer>
+
+    <script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+</script>
 
 </body>
 </html>
